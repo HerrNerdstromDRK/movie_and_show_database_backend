@@ -47,11 +47,13 @@ app.use(cors(corsOptions));
 const movieAndShowInfoRouter = require("./routes/movieandshowinfo");
 const hdMoviesAndShowsRouter = require("./routes/hdmoviesandshows");
 const sdMoviesAndShowsRouter = require("./routes/sdmoviesandshows");
+const missingFileInfoRouter = require("./routes/missingfileinfo");
 
 // Link the router to the database tables
 app.use("/movieandshowinfo", movieAndShowInfoRouter);
 app.use("/hdmoviesandshows", hdMoviesAndShowsRouter);
 app.use("/sdmoviesandshows", sdMoviesAndShowsRouter);
+app.use("/missingfileinfo", missingFileInfoRouter);
 
 // Be sure to place verifyJWT after the initial routes
 //app.use(verifyJWT);

@@ -5,10 +5,10 @@ const movieAndShowInfoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  //   pathToMovieOrShow: {
-  //     type: String,
-  //     required: true,
-  //   },
+  isMissingFile: {
+    type: Boolean,
+    required: true,
+  },
   // Each correlatedFile should be an array of two entries:
   // mkv file and mp4 file.
   // Either may be empty, but not both
