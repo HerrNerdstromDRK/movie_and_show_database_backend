@@ -1,0 +1,75 @@
+GET http://localhost:4000/inventoryitems/test/inventoryitems
+
+###
+GET https://karrels-crud-submission-api.onrender.com/inventoryitems
+
+###
+GET http://localhost:4000/inventoryitems/63c86e0af3de1bc87f44fe7a
+
+###
+GET http://localhost:4000/inventoryitems/byusername/danny
+
+###
+POST http://localhost:4000/inventoryitems
+Content-Type: application/json
+
+{
+    "owner": "danny",
+    "itemname": "Test Item Name 4",
+    "description": "Test Item Description 3",
+    "quantity": 12345
+}
+
+###
+DELETE http://localhost:4000/inventoryitems/63c86e15f3de1bc87f44fe86
+
+###
+PATCH http://localhost:4000/inventoryitems/63c86e0af3de1bc87f44fe7a
+Content-Type: application/json
+
+{
+    "quantity": 54321
+}
+
+###
+GET http://localhost:4000/inventoryitemusers
+
+###
+GET http://localhost:4000/inventoryitemusers/63c86e64f3de1bc87f44fea2
+
+###
+POST http://localhost:4000/inventoryitemusers/register
+Content-Type: application/json
+
+{
+    "firstName": "Danss4",
+    "lastName": "Karrels",
+    "userName": "danny223",
+    "pwd": "Abc12345!!"
+}
+
+###
+PATCH http://localhost:4000/inventoryitemusers/63c86e64f3de1bc87f44fea2
+Content-Type: application/json
+
+{
+    "firstName": "Luke"
+}
+
+###
+DELETE http://localhost:4000/inventoryitemusers/63c86e64f3de1bc87f44fea2
+
+###
+POST http://localhost:4000/inventoryitemusers/authenticate
+Content-Type: application/json
+
+{
+    "userName": "danny2",
+    "pwd": "Abc12345!!"
+}
+
+###
+GET http://localhost:4000/inventoryitemusers/refresh
+
+###
+GET http://localhost:4000/inventoryitemusers/logout
