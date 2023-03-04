@@ -48,12 +48,16 @@ const movieAndShowInfoRouter = require("./routes/movieandshowinfo");
 const hdMoviesAndShowsRouter = require("./routes/hdmoviesandshows");
 const sdMoviesAndShowsRouter = require("./routes/sdmoviesandshows");
 const missingFileInfoRouter = require("./routes/missingfileinfo");
+const jobRecordMakeFakeMKVFileRouter = require("./routes/jobrecordmakefakemkvfile");
+const jobRecordTranscodeMKVFileRouter = require("./routes/jobrecordtranscodemkvfile");
 
 // Link the router to the database tables
 app.use("/movieandshowinfo", movieAndShowInfoRouter);
 app.use("/hdmoviesandshows", hdMoviesAndShowsRouter);
 app.use("/sdmoviesandshows", sdMoviesAndShowsRouter);
 app.use("/missingfileinfo", missingFileInfoRouter);
+app.use("/jobrecordmakefakemkv", jobRecordMakeFakeMKVFileRouter);
+app.use("/jobrecordtranscodemkv", jobRecordTranscodeMKVFileRouter);
 
 // Be sure to place verifyJWT after the initial routes
 //app.use(verifyJWT);
